@@ -19,6 +19,10 @@ You can compile the timetable to PDF via LaTeX and PostScript:
 
     latex example.tex && dvips example.dvi && ps2pdf example.ps
 
+    latex 2018_1_jachym.tex && dvips 2018_1_jachym.dvi && ps2pdf 2018_1_jachym.ps && acroread 2018_1_jachym.pdf
+
+    latex 2018_1_miki.tex && dvips 2018_1_miki.dvi && ps2pdf 2018_1_miki.ps && acroread 2018_1_miki.pdf
+
 and directly with pdfLaTeX
 
     pdflatex example.tex

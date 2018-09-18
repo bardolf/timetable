@@ -73,7 +73,7 @@
 \setlength{\@rowheight}{1.2cm}
 \setlength{\@colwidth}{2.8cm}
 \setlength{\@textframe}{0.8mm}
-\setlength{\@bottomspace}{8pt}
+\setlength{\@bottomspace}{0pt}
 \setcounter{@rowcount}9
 \setcounter{@colcount}5
 \setcounter{@topheight}{2}
@@ -501,6 +501,28 @@
       \ifthenelse{\equal{\value{@day}}5}{\daymark{Freitag}}{}
       \ifthenelse{\equal{\value{@day}}6}{\daymark{Samstag}}{}
       \ifthenelse{\equal{\value{@day}}7}{\daymark{Sonntag}}{}
+
+      \stepcounter{@day}
+      \ifthenelse{\value{@day} > 7}{\addtocounter{@day}{-7}}{}
+    }
+  }
+
+  \newcommand{\czechdays}[1]
+  {
+    % Arguments: <number of start day>
+    % Macro for the english week days
+
+    \setcounter{@day}{#1}
+
+    \@ttforloop{@column}{1}{\value{@column} < \value{@colcount}}
+    {
+      \ifthenelse{\equal{\value{@day}}1}{\daymark{Pondělí}}{}
+      \ifthenelse{\equal{\value{@day}}2}{\daymark{Úterý}}{}
+      \ifthenelse{\equal{\value{@day}}3}{\daymark{Středa}}{}
+      \ifthenelse{\equal{\value{@day}}4}{\daymark{Čtvrtek}}{}
+      \ifthenelse{\equal{\value{@day}}5}{\daymark{Pátek}}{}
+      \ifthenelse{\equal{\value{@day}}6}{\daymark{Sobota}}{}
+      \ifthenelse{\equal{\value{@day}}7}{\daymark{Neděle}}{}
 
       \stepcounter{@day}
       \ifthenelse{\value{@day} > 7}{\addtocounter{@day}{-7}}{}

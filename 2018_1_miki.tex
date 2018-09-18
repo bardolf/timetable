@@ -1,0 +1,90 @@
+\documentclass[a4paper,10pt]{report}
+
+% Definitions
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+
+\usepackage{lscape}
+\usepackage[height=25cm]{geometry}
+\usepackage{timetable}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{landscape}
+% \noindent\printheading{Time table $6^\mathsf{th}$ Semester}
+% Define the layout of your time tables
+\setslotsize{2.5cm}{0.9cm}
+\setslotcount {5} {11}
+\settopheight{1}
+\settextframe{0.8mm}
+
+% Retro
+%\setframetype[t]{1}
+%\seteventcornerradius{0pt}
+
+% Print timestamps into event blocks
+%\setprinttimestamps{2}
+
+
+% Define event types
+\defineevent{school}{0.0} {0.28}{1.0} {1.0}{1.0}{1.0}
+\defineevent{chess}    {0.8} {0.2} {0.2} {1.0}{1.0}{1.0}
+\defineevent{sport} {1.0} {0.4} {0.2} {1.0}{1.0}{1.0}
+\defineevent{swimming} {0.36} {0.17} {0.44} {1.0}{1.0}{1.0}
+\defineevent{other}       {0.21}{0.5} {0.16}{1.0}{1.0}{1.0}
+
+% Start the time table
+\begin{timetable}
+  \timemark{08:00}
+  \timemark{09:00}
+  \timemark{10:00}
+  \timemark{11:00}
+  \timemark{12:00}
+  \timemark{13:00}
+  \timemark{14:00}
+  \timemark{15:00}
+  \timemark{16:00}
+  \timemark{17:00}
+  \timemark{18:00}
+   
+  \czechdays{1}
+  \slotevent {1} {1.17} {0.75} {Čj}                {08:10-08:55}        {Počt}     {school}
+  \slotevent {1} {2.08} {0.75} {M}                 {09:05-09:50}        {Počt}     {school}
+  \slotevent {1} {3.17} {0.75} {Pr}                {10:10-10:55}        {Počt}     {school}
+  \slotevent {1} {4.08} {0.75} {Čj}                {11:05-11:50}        {Počt}     {school}
+  \slotevent {1} {5} {0.75}    {Vv}                {12:00-12:45}        {Počt}     {school}
+  \slotevent {1} {10} {1}      {Rugby}             {17:00-18:00}        {Pípa}     {sport}
+  
+  \slotevent {2} {1.17} {0.75} {M}                 {08:10-08:55}        {Počt}     {school}
+  \slotevent {2} {2.08} {0.75} {Čj}                {09:05-09:50}        {Počt}     {school}
+  \slotevent {2} {3.17} {0.75} {Pr}                {10:10-10:55}        {Počt}     {school}
+  \slotevent {2} {4.08} {0.75} {Čj}                {11:05-11:50}        {Počt}     {school}
+  \slotevent {2} {5} {0.75}    {Aj}                {12:00-12:45}        {Šind}     {school}
+  \slotevent {2} {8.5} {1.5}   {Řezbářství}        {15:30-17:00}        {}         {other}
+  \slotevent {2} {10.75} {1}   {Šachy}             {17:45-18:45}        {Otruba}   {chess}
+    
+  \slotevent {3} {1.17} {0.75} {Čj}                 {08:10-08:55}       {Počt}     {school}
+  \slotevent {3} {2.08} {0.75} {Tv}                 {09:05-09:50}       {Počt}     {school}
+  \slotevent {3} {3.17} {0.75} {Aj}                 {10:10-10:55}       {Šind}     {school}
+  \slotevent {3} {4.08} {0.75} {LDV}                {11:05-11:50}       {Šilv}     {school}
+  \slotevent {3} {5} {0.75}    {M}                  {12:00-12:45}       {Počt}     {school}
+  \slotevent {3} {6.25} {0.75} {Aj}                 {13:15-14:00}       {Tim}      {other}
+  \slotevent {3} {9.33} {0.75} {Plavání}            {16:20-17:00}       {}         {swimming}
+  
+  \slotevent {4} {1.17} {0.75} {Aj}                 {08:10-08:55}       {Počt}     {school}
+  \slotevent {4} {2.08} {0.75} {Čj}                 {09:05-09:50}       {Počt}     {school}
+  \slotevent {4} {3.17} {0.75} {M}                  {10:10-10:55}       {Kol}      {school}
+  \slotevent {4} {4.08} {0.75} {Čj}                 {11:05-11:50}       {Neha}     {school}
+  \slotevent {4} {5} {0.75}    {Pc}                 {12:00-12:45}       {Počt}     {school}
+  \slotevent {4} {10.75} {1.25}{Rugby}              {17:30-19:00}       {U10}      {sport}
+  
+  \slotevent {5} {1.17} {0.75} {Tv}                 {08:10-08:55}       {Počt}     {school}
+  \slotevent {5} {2.08} {0.75} {M}                  {09:05-09:50}       {Počt}     {school}
+  \slotevent {5} {3.17} {0.75} {Čj}                 {10:10-10:55}       {Kol}      {school}
+  \slotevent {5} {4.08} {0.75} {Pr}                 {11:05-11:50}       {Šilv}     {school}
+  \slotevent {5} {5} {0.75}    {Hv}                 {12:00-12:45}       {Neha}     {school}   
+  
+\end{timetable}
+\end{landscape}
+\end{document}          
+

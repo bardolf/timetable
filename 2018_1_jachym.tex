@@ -1,0 +1,97 @@
+\documentclass[a4paper,10pt]{report}
+
+% Definitions
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+
+\usepackage{lscape}
+\usepackage[height=25cm]{geometry}
+\usepackage{timetable}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{landscape}
+% \noindent\printheading{Time table $6^\mathsf{th}$ Semester}
+% Define the layout of your time tables
+\setslotsize{2.5cm}{0.9cm}
+\setslotcount {5} {11}
+\settopheight{1}
+\settextframe{0.8mm}
+
+% Retro
+%\setframetype[t]{1}
+%\seteventcornerradius{0pt}
+
+% Print timestamps into event blocks
+%\setprinttimestamps{2}
+
+
+% Define event types
+\defineevent{school}   {0.0} {0.28}{1.0} {1.0}{1.0}{1.0}
+\defineevent{chess}    {0.8} {0.2} {0.2} {1.0}{1.0}{1.0}
+\defineevent{sport}    {1.0} {0.4} {0.2} {1.0}{1.0}{1.0}
+\defineevent{swimming} {0.36} {0.17} {0.44} {1.0}{1.0}{1.0}
+\defineevent{other}    {0.21}{0.5} {0.16}{1.0}{1.0}{1.0}
+
+% Start the time table
+\begin{timetable}
+  \timemark{08:00}
+  \timemark{09:00}
+  \timemark{10:00}
+  \timemark{11:00}
+  \timemark{12:00}
+  \timemark{13:00}
+  \timemark{14:00}
+  \timemark{15:00}
+  \timemark{16:00}
+  \timemark{17:00}
+  \timemark{18:00}
+   
+  \czechdays{1}
+  \slotevent {1} {1.17} {0.75} {Čj}                {08:10-08:55}        {Mráf}     {school}
+  \slotevent {1} {2.08} {0.75} {M}                 {09:05-09:50}        {Mráf}     {school}
+  \slotevent {1} {3.17} {0.75} {Pří}               {10:10-10:55}        {Mráf}     {school}
+  \slotevent {1} {4.08} {0.75} {Pří}               {11:05-11:50}        {Mráf}     {school}
+  \slotevent {1} {5} {0.75}    {Čj}                {12:00-12:45}        {Mráf}     {school}
+  \slotevent {1} {5.83} {0.75} {Vt}                {12:50-13:35}        {Šind}     {school}
+  \slotevent {1} {8} {1.75}    {Gympl}             {15:00-16:45}        {}     {other}
+  \slotevent {1} {10.75} {1}   {Rugby}             {17:45-18:45}        {Kobi}     {sport}
+  
+  \slotevent {2} {2.08} {0.75} {Aj}                {09:05-09:50}        {Kol}     {school}
+  \slotevent {2} {3.17} {0.75} {M}                 {10:10-10:55}        {Mráf}     {school}
+  \slotevent {2} {4.08} {0.75} {Čj}                {11:05-11:50}        {Mráf}     {school}
+  \slotevent {2} {5.83} {0.75} {Vt}                {12:50-13:35}        {Kuc}     {school}
+  \slotevent {2} {6.66} {0.75} {Vt}                {13:40-14:25}        {Kuc}     {school}
+  \slotevent {2} {7.5} {1}     {Aj}                {14:30-15:30}        {Tim}     {other}
+  \slotevent {2} {9.17} {1.58} {Šachy}             {16:10-17:45}        {Star}     {chess}
+  \slotevent {2} {10.75} {1.25}{Rugby}             {17:30-19:00}        {U12}     {sport}
+
+  
+  \slotevent {3} {1.17} {0.75} {Aj}                {08:10-08:55}        {Tim}     {school}
+  \slotevent {3} {2.08} {0.75} {M}                 {09:05-09:50}        {Mráf}     {school}
+  \slotevent {3} {3.17} {0.75} {Vla}               {10:10-10:55}        {Mráf}     {school}
+  \slotevent {3} {4.08} {0.75} {Čj}                {11:05-11:50}        {Mráf}     {school}
+  \slotevent {3} {5.5} {2}     {Šachy ind.}        {12:30-14:30}        {Star}     {chess}
+  \slotevent {3} {8.66} {0.75} {Plavání}           {15:40-16:20}        {}     {swimming}
+
+  \slotevent {4} {1.17} {0.75} {Čj}                 {08:10-08:55}        {Mráf}     {school}
+  \slotevent {4} {2.08} {0.75} {M}                  {09:05-09:50}        {Mráf}     {school}
+  \slotevent {4} {3.17} {0.75} {Aj}                 {10:10-10:55}        {Kol}     {school}
+  \slotevent {4} {4.08} {0.75} {Pc}                 {11:05-11:50}        {Neha}     {school}
+  \slotevent {4} {5} {0.75}    {Čj}                 {12:00-12:45}        {Mráf}     {school}
+  \slotevent {4} {5.83} {0.75} {Vla}                {12:50-13:35}        {Mráf}     {school}
+  \slotevent {4} {9.17} {1.5}  {Šachy}              {16:10-17:45}        {Star}     {chess}
+  \slotevent {4} {10.75} {1.25}{Rugby}              {17:30-19:00}        {U12}     {sport}
+
+  \slotevent {5} {1.17} {0.75} {Čj}                 {08:10-08:55}        {Mráf}     {school}
+  \slotevent {5} {2.08} {0.75} {Hv}                 {09:05-09:50}        {Mráf}     {school}
+  \slotevent {5} {3.17} {0.75} {Aj}                 {10:10-10:55}        {Kol}     {school}
+  \slotevent {5} {4.08} {0.75} {LDV}                {11:05-11:50}        {Šilv}     {school}
+  \slotevent {5} {5} {0.75}    {Vv}                 {12:00-12:45}        {Neha}     {school} 
+  \slotevent {5} {6.5} {1.5}   {Šachy ind.}         {13:30-15:00}        {Star}     {chess}
+  \slotevent {5} {9} {1}       {Rugby}              {16:00-17:00}        {Pípa}     {sport}
+  
+\end{timetable}
+\end{landscape}
+\end{document}          
+
